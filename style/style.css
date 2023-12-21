@@ -22,6 +22,10 @@ h2 {
     font-size: 1.75rem;
     font-weight: 600;
 }
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
 p, a{
     text-decoration: none;
     font-size: 1.25rem;
@@ -142,6 +146,9 @@ main {
     flex-basis: 70%;
     margin-right: 1.5rem;
     color: var(--putih);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 article {
     text-align: justify;
@@ -244,4 +251,308 @@ footer {
 #top .logo h1:hover {
     color: var(--hitam);
     transition: 0.15s ease-in-out;
+}
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.left-board {
+    background: radial-gradient(50% 100% at 50% 0%, #747895 0%, #1B203A 100%);
+    box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.50) inset;
+    width: 28rem;
+    height: 23rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trace-items {
+    position: relative;
+    z-index: 2;
+    top: 0.5rem;
+    left: 9.95rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.trace-item-mid {
+    display: flex;
+    gap: 2rem;
+}
+.trace-items img {
+    background: var(--hitam);
+    padding: 0.5rem;
+    border-radius: 5rem;
+    width: 4rem;
+    cursor: pointer;
+}
+.trace-item:hover {
+    border: 0.25rem solid var(--kuning);
+    transition: 0.05s ease-in-out;
+}
+.background {
+    position: relative;
+    z-index: 1;
+    right: 9rem;
+}
+.background img {
+    height: 23rem;
+}
+.right-board {
+    background: linear-gradient(0deg, #1B203A 0%, #9194AC 157.75%);
+    border-radius: 1.875rem;
+    width: 20rem;
+    height: 23rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.right-board h2 {
+    text-align: center;
+}
+.right-board-container {
+    margin: 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.right-board-container img {
+    background: var(--hitam);
+    padding: 0.5rem;
+    border-radius: 5rem;
+    width: 3.65rem;
+}
+.right-board-content p {
+    font-size: 0.75rem;
+    text-align: justify;
+    margin-bottom: 0.75rem;
+}
+.right-board-content p span {
+    color: var(--kuning);
+}
+
+/*EIDOLON*/
+.eidolon-container {
+    background: radial-gradient(50% 50% at 50% 50%, #747895 0%, #1B203A 100%);
+    border-radius: 5rem;
+
+    max-width: 51.95rem;
+    height: 35rem;
+}
+.eidolon-container img {
+    position: relative;
+}
+/*1*/
+.eidolon-container img[src="asset/A%20Falling%20Star.png"] {
+    width: 11rem;
+    top: -1rem;
+    left: 7rem;
+    filter: drop-shadow(-4px -6px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Falling%20Star.png"]:hover {
+    width: 13rem;
+    transform: translateY(2rem) translateX(2rem);
+    filter: drop-shadow(-4px -6px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*2*/
+.eidolon-container img[src="asset/An%20Unwilling%20Host.png"] {
+    width: 12rem;
+    top: 5rem;
+    left: 3rem;
+    filter: drop-shadow(0px 0px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/An%20Unwilling%20Host.png"]:hover {
+    width: 14rem;
+    transform: translateY(2rem) translateX(0rem);
+    filter: drop-shadow(0px 0px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*3*/
+.eidolon-container img[src="asset/A%20Leading%20Whisper.png"] {
+    width: 17rem;
+    top: 1rem;
+    right: 6rem;
+    filter: drop-shadow(4px -6px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Leading%20Whisper.png"]:hover {
+    width: 19rem;
+    transform: translateY(2rem) translateX(-2rem);
+    filter: drop-shadow(4px -6px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*4*/
+.eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"] {
+    width: 17rem;
+    top: 1rem;
+    left: 3rem;
+    filter: drop-shadow(-4px 6px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"]:hover {
+    width: 19rem;
+    transform: translateY(-2rem) translateX(2rem);
+    filter: drop-shadow(-4px 6px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+    /*5*/
+.eidolon-container img[src="asset/A%20Surviving%20Hope.png"] {
+    width: 11rem;
+    bottom: -5rem;
+    left: 1rem;
+    filter: drop-shadow(5px 7px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Surviving%20Hope.png"]:hover {
+    width: 13rem;
+    transform: translateY(-2rem) translateX(0);
+    filter: drop-shadow(5px 7px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*6*/
+.eidolon-container img[src="asset/A%20Destructing%20Glance.png"] {
+    width: 13rem;
+    top: 2rem;
+    left: 2rem;
+    filter: drop-shadow(5px 7px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Destructing%20Glance.png"]:hover {
+    width: 15rem;
+    transform: translateY(-2rem) translateX(-2rem);
+    filter: drop-shadow(5px 7px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+
+/*EIDOLONG-INFO*/
+.eidolon-info h3{
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 8px;
+    }
+    .eidolon-container {
+        height: 20rem;
+    }
+    /*1*/
+    .eidolon-container img[src="asset/A%20Falling%20Star.png"] {
+        width: 4rem;
+        top: -1rem;
+        left: 7rem;
+        filter: drop-shadow(-4px -6px 6px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Falling%20Star.png"]:hover {
+        width: 6rem;
+        transform: translateY(2rem) translateX(2rem);
+        filter: drop-shadow(-4px -6px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*2*/
+    .eidolon-container img[src="asset/An%20Unwilling%20Host.png"] {
+        width: 5rem;
+        top: 5rem;
+        left: 3rem;
+        filter: drop-shadow(0px 0px 6px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/An%20Unwilling%20Host.png"]:hover {
+        width: 7rem;
+        transform: translateY(2rem) translateX(0rem);
+        filter: drop-shadow(0px 0px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*3*/
+    .eidolon-container img[src="asset/A%20Leading%20Whisper.png"] {
+        width: 5rem;
+        top: 1rem;
+        right: 6rem;
+        filter: drop-shadow(4px -6px 6px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Leading%20Whisper.png"]:hover {
+        width: 12rem;
+        transform: translateY(2rem) translateX(-2rem);
+        filter: drop-shadow(4px -6px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*4*/
+    .eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"] {
+        width: 10rem;
+        top: 1rem;
+        left: 3rem;
+        filter: drop-shadow(-4px 6px 6px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"]:hover {
+        width: 12rem;
+        transform: translateY(-2rem) translateX(2rem);
+        filter: drop-shadow(-4px 6px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*5*/
+    .eidolon-container img[src="asset/A%20Surviving%20Hope.png"] {
+        width: 4rem;
+        bottom: -5rem;
+        left: 1rem;
+        filter: drop-shadow(5px 7px 6px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Surviving%20Hope.png"]:hover {
+        width: 5rem;
+        transform: translateY(-2rem) translateX(0);
+        filter: drop-shadow(5px 7px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*6*/
+    .eidolon-container img[src="asset/A%20Destructing%20Glance.png"] {
+        width: 5rem;
+        top: 2rem;
+        left: 2rem;
+        filter: drop-shadow(5px 7px 6px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Destructing%20Glance.png"]:hover {
+        width: 8rem;
+        transform: translateY(-2rem) translateX(-2rem);
+        filter: drop-shadow(5px 7px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
 }
