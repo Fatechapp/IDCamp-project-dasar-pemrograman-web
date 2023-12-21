@@ -158,4 +158,71 @@ document.addEventListener('DOMContentLoaded', function () {
         level70Table.setAttribute("hidden", "")
         level80Table.removeAttribute("hidden")
     })
+
+    const talentLink = document.getElementById('talent')
+    const talentContent = document.querySelector('.perfect-pickoff-content')
+
+    const basicAttackLink = document.getElementById('basic-attack')
+    const basicAttackContent = document.querySelector('.farewell-hit-content')
+
+    const ultimateLink = document.getElementById('ultimate')
+    const ultimateContent = document.querySelector('.stardust-ace-content')
+
+    const skillLink = document.getElementById('skill')
+    const skillContent = document.querySelector('.rip-home-run-content')
+
+    const techniqueLink = document.getElementById('technique')
+    const techniqueContent = document.querySelector('.immortal-third-strike-content')
+
+    talentLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        talentContent.removeAttribute("hidden")
+        basicAttackContent.setAttribute("hidden", "")
+        ultimateContent.setAttribute("hidden", "")
+        skillContent.setAttribute("hidden", "")
+        techniqueContent.setAttribute("hidden", "")
+    });
+
+// Repeat the above structure for other menu items
+    basicAttackLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        talentContent.setAttribute("hidden", "")
+        basicAttackContent.removeAttribute("hidden")
+        ultimateContent.setAttribute("hidden", "")
+        skillContent.setAttribute("hidden", "")
+        techniqueContent.setAttribute("hidden", "")
+    });
+
+    ultimateLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        talentContent.setAttribute("hidden", "")
+        basicAttackContent.setAttribute("hidden", "")
+        ultimateContent.removeAttribute("hidden")
+        skillContent.setAttribute("hidden", "")
+        techniqueContent.setAttribute("hidden", "")
+    });
+
+    skillLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        talentContent.setAttribute("hidden", "")
+        basicAttackContent.setAttribute("hidden", "")
+        ultimateContent.setAttribute("hidden", "")
+        skillContent.removeAttribute("hidden")
+        techniqueContent.setAttribute("hidden", "")
+    });
+
+    techniqueLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        talentContent.setAttribute("hidden", "")
+        basicAttackContent.setAttribute("hidden", "")
+        ultimateContent.setAttribute("hidden", "")
+        skillContent.setAttribute("hidden", "")
+        techniqueContent.removeAttribute("hidden")
+    });
+
 })
