@@ -1,7 +1,564 @@
 :root {
     --putih: #f2f2f2;
     --hitam: #2a2a2a;
+    --abu: #5e5e5e;:root {
+    --putih: #f2f2f2;
+    --hitam: #2a2a2a;
     --abu: #5e5e5e;
+    --kuning: #ffb649;
+    --biruMuda: #D9D9D9;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 16px;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+p, a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--kuning);
+    border-radius: 5px;
+}
+
+nav {
+    background: linear-gradient(180deg, #2A2A2A 0%, rgba(42, 42, 42, 0.80) 53.3%, rgba(42, 42, 42, 0.00) 100%);
+
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    z-index: 10;
+}
+.logo h1{
+    color: var(--putih);
+    transition: 0.15s ease-in-out;
+}
+.logo span {
+    color: var(--kuning);
+}
+.navigation-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.navigation-item a {
+    color: var(--putih);
+}
+.navigation-item a:hover {
+    color: var(--kuning);
+    transition: 0.15s linear;
+}
+.navigation-item a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--kuning);
+    transform: scaleX(0);
+    transition: 0.15s linear;
+}
+.navigation-item a:hover::after {
+    transform: scaleX(1);
+    transition: 0.15s linear;
+}
+
+/*HERO IMAGE*/
+.hero-image {
+    display: flex;
+    align-items: flex-end;
+}
+.hero-image img {
+    width: 100%;
+}
+.kotak-kiri {
+    background: var(--hitam);
+    width: 5rem;
+    height: 120%;
+    position: absolute;
+    opacity: 90%;
+}
+.kotak-bawah {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.k-bawah{
+    width: 30rem;
+    height: 10rem;
+    background: var(--hitam);
+    opacity: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--putih);
+}
+.k-bawah h1{
+    font-weight: 400;
+}
+.k-bawah-kanan {
+    border-radius: 6rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.k-bawah-kanan img {
+    width: 2.5rem;
+}
+.k-bawah-kiri {
+    border-radius: 0 6rem 0 0;
+}
+
+/*MAIN*/
+main {
+    background: var(--hitam);
+    padding: 5rem 2rem;
+    display: flex;
+}
+#content {
+    background: var(--abu);
+    flex-basis: 70%;
+    margin-right: 1.5rem;
+    color: var(--putih);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+article {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+article:not(.profile) {
+    margin-top: 2rem;
+}
+aside {
+    background: var(--kuning);
+    flex-basis: 30%;
+}
+
+/*ASCENSION*/
+.ascension-option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 60%;
+}
+.ascension-option a {
+    background: var(--putih);
+    color: var(--hitam);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 2rem;
+    transition: 0.15s ease-in-out;
+}
+.ascension-option a:hover {
+    color: var(--putih);
+    border: 1rem solid var(--hitam);
+    transition: 0.15s ease-in-out;
+}
+.ascension-table {
+    background: var(--biruMuda);
+    color: var(--hitam);
+}
+.ascension-table table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.ascension-table table th {
+    width: 25%;
+    height: 3rem;
+    background: var(--abu);
+    color: var(--putih);
+}
+.ascension-table table th, td {
+    border-bottom: 1px solid var(--hitam);
+}
+.ascension-table table tr:not(.table-header):hover {
+    background: var(--putih);
+    transition: 0.15s ease-in-out;
+}
+td[rowspan="4"] ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+}
+
+/*FOOTER*/
+footer {
+    background: var(--biruMuda);
+    padding: 3rem 7.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+}
+.footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.footer-block {
+    display: flex;
+    flex-direction: column;
+}
+.footer-block a{
+    color: var(--hitam);
+    transition: 0.15s ease-in-out;
+}
+.footer-block a:hover {
+    color: var(--kuning);
+    transition: 0.15s ease-in-out;
+}
+.footer-block h2 {
+    margin-bottom: 1rem;
+}
+#top .logo h1:hover {
+    color: var(--hitam);
+    transition: 0.15s ease-in-out;
+}
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.left-board {
+    background: radial-gradient(50% 100% at 50% 0%, #747895 0%, #1B203A 100%);
+    box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.50) inset;
+    width: 28rem;
+    height: 23rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trace-items {
+    position: relative;
+    z-index: 2;
+    top: 0.5rem;
+    left: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.trace-item-mid {
+    display: flex;
+    gap: 2rem;
+}
+.trace-items img {
+    background: var(--hitam);
+    padding: 0.5rem;
+    border-radius: 5rem;
+    width: 4rem;
+    cursor: pointer;
+}
+.trace-item:hover {
+    border: 0.25rem solid var(--kuning);
+    transition: 0.05s ease-in-out;
+}
+.background {
+    position: relative;
+    z-index: 1;
+    right: 8rem;
+}
+.background img {
+    height: 23rem;
+}
+.right-board {
+    background: linear-gradient(0deg, #1B203A 0%, #9194AC 157.75%);
+    border-radius: 1.875rem;
+    width: 20rem;
+    height: 23rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.right-board h2 {
+    text-align: center;
+}
+.right-board-container {
+    margin: 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.right-board-container img {
+    background: var(--hitam);
+    padding: 0.5rem;
+    border-radius: 5rem;
+    width: 3.65rem;
+}
+.right-board-content p {
+    font-size: 0.75rem;
+    text-align: justify;
+    margin-bottom: 0.75rem;
+}
+.right-board-content p span {
+    color: var(--kuning);
+}
+
+/*EIDOLON*/
+.eidolon-container {
+    background: radial-gradient(50% 50% at 50% 50%, #747895 0%, #1B203A 100%);
+    border-radius: 5rem;
+
+    max-width: 51.95rem;
+    height: 35rem;
+}
+.eidolon-container img {
+    position: relative;
+}
+/*1*/
+.eidolon-container img[src="asset/A%20Falling%20Star.png"] {
+    width: 11rem;
+    top: -1rem;
+    left: 7rem;
+    filter: drop-shadow(-4px -6px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Falling%20Star.png"]:hover {
+    width: 13rem;
+    transform: translateY(2rem) translateX(2rem);
+    filter: drop-shadow(-4px -6px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*2*/
+.eidolon-container img[src="asset/An%20Unwilling%20Host.png"] {
+    width: 12rem;
+    top: 5rem;
+    left: 3rem;
+    filter: drop-shadow(0px 0px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/An%20Unwilling%20Host.png"]:hover {
+    width: 14rem;
+    transform: translateY(2rem) translateX(0rem);
+    filter: drop-shadow(0px 0px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*3*/
+.eidolon-container img[src="asset/A%20Leading%20Whisper.png"] {
+    width: 17rem;
+    top: 1rem;
+    right: 6rem;
+    filter: drop-shadow(4px -6px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Leading%20Whisper.png"]:hover {
+    width: 19rem;
+    transform: translateY(2rem) translateX(-2rem);
+    filter: drop-shadow(4px -6px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*4*/
+.eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"] {
+    width: 17rem;
+    top: 1rem;
+    left: 3rem;
+    filter: drop-shadow(-4px 6px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"]:hover {
+    width: 19rem;
+    transform: translateY(-2rem) translateX(2rem);
+    filter: drop-shadow(-4px 6px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+    /*5*/
+.eidolon-container img[src="asset/A%20Surviving%20Hope.png"] {
+    width: 11rem;
+    bottom: -5rem;
+    left: 1rem;
+    filter: drop-shadow(5px 7px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Surviving%20Hope.png"]:hover {
+    width: 13rem;
+    transform: translateY(-2rem) translateX(0);
+    filter: drop-shadow(5px 7px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+/*6*/
+.eidolon-container img[src="asset/A%20Destructing%20Glance.png"] {
+    width: 13rem;
+    top: 2rem;
+    left: 2rem;
+    filter: drop-shadow(5px 7px 6px var(--putih));
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+.eidolon-container img[src="asset/A%20Destructing%20Glance.png"]:hover {
+    width: 15rem;
+    transform: translateY(-2rem) translateX(-2rem);
+    filter: drop-shadow(5px 7px 15px var(--putih));
+    z-index: 10;
+    transition: 0.25s ease-in-out;
+}
+
+/*EIDOLONG-INFO*/
+.eidolon-info h3{
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 8px;
+    }
+    .eidolon-container {
+        height: 20rem;
+    }
+    /*1*/
+    .eidolon-container img[src="asset/A%20Falling%20Star.png"] {
+        width: 6rem;
+        top: 1rem;
+        left: 4.5rem;
+        filter: drop-shadow(-0.25px -1px 1px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Falling%20Star.png"]:hover {
+        width: 7rem;
+        transform: translateY(2rem) translateX(2rem);
+        filter: drop-shadow(-1px -2px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*2*/
+    .eidolon-container img[src="asset/An%20Unwilling%20Host.png"] {
+        width: 6.5rem;
+        top: 5rem;
+        left: 2.5rem;
+        filter: drop-shadow(0px 0px 1px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/An%20Unwilling%20Host.png"]:hover {
+        width: 7rem;
+        transform: translateY(-1rem) translateX(0rem);
+        filter: drop-shadow(0px 0px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*3*/
+    .eidolon-container img[src="asset/A%20Leading%20Whisper.png"] {
+        width: 10rem;
+        top: 2rem;
+        left: -2.5rem;
+        filter: drop-shadow(1px -1px 1px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Leading%20Whisper.png"]:hover {
+        width: 11rem;
+        transform: translateY(1rem) translateX(-2rem);
+        filter: drop-shadow(4px -6px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*4*/
+    .eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"] {
+        width: 9rem;
+        top: 1rem;
+        left: 2.25rem;
+        filter: drop-shadow(-1px 2px 1px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Trailblazing%20WIll.png"]:hover {
+        width: 10rem;
+        transform: translateY(-1rem) translateX(2rem);
+        filter: drop-shadow(-1px 2px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*5*/
+    .eidolon-container img[src="asset/A%20Surviving%20Hope.png"] {
+        width: 5rem;
+        bottom: -4rem;
+        left: 1.5rem;
+        filter: drop-shadow(2px 3px 1px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Surviving%20Hope.png"]:hover {
+        width: 6rem;
+        transform: translateY(-2rem) translateX(0);
+        filter: drop-shadow(2px 3px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+    /*6*/
+    .eidolon-container img[src="asset/A%20Destructing%20Glance.png"] {
+        width: 6rem;
+        top: 2rem;
+        left: 3rem;
+        filter: drop-shadow(1px 2px 1px var(--putih));
+        z-index: 1;
+        transition: 0.25s ease-in-out;
+    }
+    .eidolon-container img[src="asset/A%20Destructing%20Glance.png"]:hover {
+        width: 8rem;
+        transform: translateY(-1rem) translateX(-2rem);
+        filter: drop-shadow(1px 2px 15px var(--putih));
+        z-index: 10;
+        transition: 0.25s ease-in-out;
+    }
+}
     --kuning: #ffb649;
     --biruMuda: #D9D9D9;
 }
