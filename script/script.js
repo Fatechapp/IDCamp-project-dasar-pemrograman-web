@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
         techniqueContent.setAttribute("hidden", "")
     });
 
-// Repeat the above structure for other menu items
+    // TRACE
     basicAttackLink.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -225,4 +225,86 @@ document.addEventListener('DOMContentLoaded', function () {
         techniqueContent.removeAttribute("hidden")
     });
 
+    // EIDOLON
+    const aFallingStarLink = document.getElementById('aFallingStar');
+    const aFallingStarContent = document.querySelector('.a-falling-star');
+
+    const anUnwillingWillLink = document.getElementById('anUnwillingWill');
+    const anUnwillingWillContent = document.querySelector('.an-unwilling-host');
+
+    const aLeadingWhisperLink = document.getElementById('aLeadingWhisper');
+    const aLeadingWhisperContent = document.querySelector('.a-leading-whisper');
+
+    const aTrailblazingWillLink = document.getElementById('aTrailblazingWill');
+    const aTrailblazingWillContent = document.querySelector('.a-trailblazing-will');
+
+    const aSurvivingHopeLink = document.getElementById('aSurvivingHope');
+    const aSurvivingHopeContent = document.querySelector('.a-surviving-hope');
+
+    const aDestructingGlanceLink = document.getElementById('aDestructingGlance');
+    const aDestructingGlanceContent = document.querySelector('.a-destructing-glance');
+
+    aFallingStarLink.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        aFallingStarContent.removeAttribute("hidden")
+        anUnwillingWillContent.setAttribute("hidden", "")
+        aLeadingWhisperContent.setAttribute("hidden", "")
+        aTrailblazingWillContent.setAttribute("hidden", "")
+        aSurvivingHopeContent.setAttribute("hidden", "")
+        aDestructingGlanceContent.setAttribute("hidden", "")
+    })
+    anUnwillingWillLink.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        aFallingStarContent.setAttribute("hidden", "")
+        anUnwillingWillContent.removeAttribute("hidden")
+        aLeadingWhisperContent.setAttribute("hidden", "")
+        aTrailblazingWillContent.setAttribute("hidden", "")
+        aSurvivingHopeContent.setAttribute("hidden", "")
+        aDestructingGlanceContent.setAttribute("hidden", "")
+    })
+    aLeadingWhisperLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        aFallingStarContent.setAttribute("hidden", "");
+        anUnwillingWillContent.setAttribute("hidden", "");
+        aLeadingWhisperContent.removeAttribute("hidden");
+        aTrailblazingWillContent.setAttribute("hidden", "");
+        aSurvivingHopeContent.setAttribute("hidden", "");
+        aDestructingGlanceContent.setAttribute("hidden", "");
+    });
+
+    aTrailblazingWillLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        aFallingStarContent.setAttribute("hidden", "");
+        anUnwillingWillContent.setAttribute("hidden", "");
+        aLeadingWhisperContent.setAttribute("hidden", "");
+        aTrailblazingWillContent.removeAttribute("hidden");
+        aSurvivingHopeContent.setAttribute("hidden", "");
+        aDestructingGlanceContent.setAttribute("hidden", "");
+    });
+
+    aSurvivingHopeLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        aFallingStarContent.setAttribute("hidden", "");
+        anUnwillingWillContent.setAttribute("hidden", "");
+        aLeadingWhisperContent.setAttribute("hidden", "");
+        aTrailblazingWillContent.setAttribute("hidden", "");
+        aSurvivingHopeContent.removeAttribute("hidden");
+        aDestructingGlanceContent.setAttribute("hidden", "");
+    });
+
+    aDestructingGlanceLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        aFallingStarContent.setAttribute("hidden", "");
+        anUnwillingWillContent.setAttribute("hidden", "");
+        aLeadingWhisperContent.setAttribute("hidden", "");
+        aTrailblazingWillContent.setAttribute("hidden", "");
+        aSurvivingHopeContent.setAttribute("hidden", "");
+        aDestructingGlanceContent.removeAttribute("hidden");
+    });
 })
