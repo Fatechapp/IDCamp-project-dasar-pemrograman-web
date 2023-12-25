@@ -453,6 +453,9 @@ footer {
 .eidolon-info h3{
     font-weight: 600;
 }
+.eidolon-info span {
+    color: var(--kuning);
+}
 
 /*BUILD*/
 .build-container {
@@ -514,6 +517,9 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+.build-detail span {
+    color: var(--kuning);
 }
 
 /*ASIDE BIO*/
