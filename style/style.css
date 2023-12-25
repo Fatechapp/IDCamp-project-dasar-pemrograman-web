@@ -613,7 +613,21 @@ aside {
     html {
         font-size: 8px;
     }
+    main {
+        flex-wrap: wrap-reverse;
+        gap: 4rem;
+    }
+    #content {
+        flex-basis: 100%;
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+    }
     .eidolon-container {
+        width: 30rem;
         height: 20rem;
     }
     /*1*/
